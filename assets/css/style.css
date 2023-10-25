@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #f1f4f9, #dff1ff);
+    overflow: hidden;
+}
+
+section .color {
+    position: absolute;
+    filter: blur(150px);
+}
+
+section .color:nth-child(1) {
+    top: -350px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: #ff359b;
+}
+
+section .color:nth-child(2) {
+    bottom: -150px;
+    left: 100px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: #fffd87;
+}
+
+section .color:nth-child(3) {
+    bottom: 50px;
+    right: 100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #00d2ff;
+}
+
+.box {
+    position: relative;
+}
+
+.box .square {
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    animation: animate 10s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+
+@keyframes animate {
+    0%, 100% {
+        transform: translateY(-40px);
+    }
+    50% {
+        transform: translateY(40px);
+    }
+}
+
+.box .square:nth-child(1) {
+    top: -50px;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+}
+
+.box .square:nth-child(2) {
+    top: 150px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+}
+
+.box .square:nth-child(3) {
+    bottom: 50px;
+    right: -60px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+
+.box .square:nth-child(4) {
+    bottom: -80px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+}
+
+.box .square:nth-child(5) {
+    top: -80px;
+    left: 140px;
+    width: 60px;
+    height: 60px;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.15s;
+    overflow: hidden;
+}
+
+body.signup .container {
+    min-height: 550px;
+}
+
+.form {
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px;
+    transition: 0.5s;
+}
+
+form#signupForm {
+    left: 100%;
+}
+
+body.signup form#signinForm {
+    left: -100%;
+}
+
+body.signup form#signupForm {
+    left: 0;
+}
+
+.form h2 {
+    position: relative;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.form .inputBox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form .inputBox a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.form .inputBox a:nth-child(2):hover {
+    color: #111;
+}
+
+.form .inputBox a:nth-child(2) {
+    text-decoration: underline;
+}
+
+.form .inputBox input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form .inputBox input::placeholder {
+    color: #fff;
+}
+
+.form .inputBox input[type="submit"] {
+    background: #fff;
+    color: #111;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 300px;
+        min-height: 350px;
+    }
+
+    body.signup .container {
+        min-height: 500px;
+    }
+
+    .form {
+        padding: 30px;
+    }
+
+    .form h2 {
+        font-size: 16.8px;
+    }
+
+    .form .inputBox, .form .inputBox input {
+        font-size: 11px;
+    }
+
+    .form .inputBox input[type="submit"] {
+        font-size: 1.3em;
+    }
+}

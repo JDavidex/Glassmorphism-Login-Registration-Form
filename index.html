@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism | Inicio de sesión & registro</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <div class="square" style="--i:0"></div>
+            <div class="square" style="--i:1"></div>
+            <div class="square" style="--i:2"></div>
+            <div class="square" style="--i:3"></div>
+            <div class="square" style="--i:4"></div>
+            <div class="container">
+
+                <!-- signinForm -->
+                <form id="signinForm" class="form">
+                    <h2>Iniciar sesi&oacute;n</h2>
+                    <div class="inputBox">
+                        <input type="text" placeholder="Usuario">
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" placeholder="Contrase&ntilde;a">
+                    </div>
+                    <div class="inputBox group">
+                        <a href="#">¿Contrase&ntilde;a olvidada?</a>
+                        <a id="signup" href="#">Registrarse</a>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Ingresar">
+                    </div>
+                </form>
+                <!-- /signinForm -->
+
+                <!-- signupForm -->
+                <form id="signupForm" class="form">
+                    <h2>Reg&iacute;strate</h2>
+                    <div class="inputBox">
+                        <input type="text" placeholder="Usuario">
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" placeholder="Correo electr&oacute;nico">
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" placeholder="Crear contrase&ntilde;a">
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" placeholder="Confirmar ontrase&ntilde;a">
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Registrarse">
+                    </div>
+                    <div class="inputBox group">
+                        <a href="#">¿Ya tienes una cuenta?</a>
+                        <a id="signin" href="#">Iniciar sesión</a>
+                    </div>
+                </form>
+                <!-- /signupForm -->
+            </div>
+        </div>
+    </section>
+    <!-- JS -->
+    <script src="assets/js/functions.js"></script>
+</body>
+
+</html>
