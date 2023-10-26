@@ -175,11 +175,15 @@ body.signup form#signupForm {
 
 .form h2 {
     position: relative;
-    color: #fff;
+    color: #8a2435;
     font-size: 1.5em;
     font-weight: 500;
     letter-spacing: 1px;
     margin-bottom: 10px;
+}
+
+section.active .form h2 {
+    color: #fff;
 }
 
 .form .inputBox {
@@ -191,11 +195,19 @@ body.signup form#signupForm {
 }
 
 .form .inputBox a {
-    color: #fff;
+    color: #8a2435;
     text-decoration: none;
 }
 
+section.active .form .inputBox a {
+    color: #fff;
+}
+
 .form .inputBox a:nth-child(2):hover {
+    color: #fff;
+}
+
+section.active .form .inputBox a:nth-child(2):hover {
     color: #111;
 }
 
@@ -215,22 +227,34 @@ body.signup form#signupForm {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 16px;
     letter-spacing: 1px;
-    color: #fff;
+    color: #8a2435;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
+section.active .form .inputBox input {
+    color: #fff;
+}
+
 .form .inputBox input::placeholder {
+    color: #8a2435;
+}
+
+section.active .form .inputBox input::placeholder {
     color: #fff;
 }
 
 .form .inputBox input[type="submit"] {
     background: #fff;
-    color: #111;
+    color: #8a2435;
     cursor: pointer;
     margin-bottom: 20px;
     font-size: 16px;
     letter-spacing: 1px;
     font-weight: 500;
+}
+
+section.active .form .inputBox input[type="submit"] {
+    color: #111;
 }
 
 .dark {
